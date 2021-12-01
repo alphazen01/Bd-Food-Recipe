@@ -30,15 +30,22 @@ class customGridTile extends StatelessWidget {
                 Image.asset("$imageUrl"),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Text("$title"),
+                  child: Text("$title",
+                  style: TextStyle(color: Colors.green),
+                  ),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.watch),
-                    Text("30 min"),
+                   
                     Row(
                   children: [
-                    Icon(Icons.food_bank),
+                     Icon(Icons.watch,color: Colors.red,),
+                    Text("30 min"),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(Icons.food_bank,color: Colors.red,),
                     Text("15 ingredients")
                   ],
                 )

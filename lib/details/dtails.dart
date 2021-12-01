@@ -49,12 +49,12 @@ class DetailScreen extends StatelessWidget {
                color: Colors.orange,
              ),
               customButton(
-               icon: Icons.check_outlined,
-               label: "Checked",
+               icon: Icons.favorite,
+               label: "Favorite",
                color: Colors.red,
              ),
               customButton(
-               icon: Icons.check_outlined,
+               icon: Icons.video_camera_front_outlined,
                label: "Checked",
                color: Colors.pink,
              )
@@ -71,27 +71,35 @@ class DetailScreen extends StatelessWidget {
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
-                         Text("Ingrdients"),
+                         Padding(
+                           padding: const EdgeInsets.symmetric(horizontal: 10),
+                           child: Text("Ingrdients",
+                           style: TextStyle(fontSize: 16),
+                           ),
+                         ),
                            Divider(
                        thickness: 3,
                        color: Colors.orange,
                      ),
                      for(int i=0; i<data["ingredients"].length; i++)
-                     Row(
-                       children: [
-                         Container(
-                         height: 8,
-                         width: 8,
-                         decoration: BoxDecoration(
-                           color: Colors.red,
-                           borderRadius: BorderRadius.circular(4),
-                         ),  
-                         ),
-                         SizedBox(
-                           width: 10,
-                         ),
-                          Text(data['ingredients'][i]),
-                       ],
+                     Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child: Row(
+                         children: [
+                           Container(
+                           height: 8,
+                           width: 8,
+                           decoration: BoxDecoration(
+                             color: Colors.red,
+                             borderRadius: BorderRadius.circular(4),
+                           ),  
+                           ),
+                           SizedBox(
+                             width: 10,
+                           ),
+                            Text(data['ingredients'][i]),
+                         ],
+                       ),
                      ),
                     
                        ],
@@ -105,32 +113,40 @@ class DetailScreen extends StatelessWidget {
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
-                         Text("Directions"),
+                         Padding(
+                           padding: const EdgeInsets.symmetric(horizontal: 10),
+                           child: Text("Directions",
+                           style: TextStyle(fontSize: 16),
+                           ),
+                         ),
                            Divider(
                        thickness: 3,
                        color: Colors.orange,
                      ),
                      for(int i=0; i<data["directions"].length; i++)
-                      Row(
-                       children: [
-                         Container(
-                         height: 8,
-                         width: 8,
-                         decoration: BoxDecoration(
-                           color: Colors.red,
-                           borderRadius: BorderRadius.circular(4),
-                         ),  
-                         ),
-                         SizedBox(
-                           width: 10,
-                         ),
-                          Expanded(
-                            child: 
-                            Text(data['directions'][i]
-                            )
-                            ),
-                       ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                         children: [
+                           Container(
+                           height: 8,
+                           width: 8,
+                           decoration: BoxDecoration(
+                             color: Colors.red,
+                             borderRadius: BorderRadius.circular(4),
+                           ),  
+                           ),
+                           SizedBox(
+                             width: 10,
+                           ),
+                            Expanded(
+                              child: 
+                              Text(data['directions'][i]
+                              )
+                              ),
+                         ],
                      ),
+                      ),
                     
                      
                        ],
