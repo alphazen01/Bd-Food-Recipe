@@ -2,12 +2,14 @@ import 'package:demo/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
+  
   static final String path="DetailScreen";
   
-  const DetailScreen({ Key? key }) : super(key: key);
+  const DetailScreen({ Key? key, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    
      final double size = MediaQuery.of(context).size.width;
      final Map items=ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
@@ -61,6 +63,7 @@ class DetailScreen extends StatelessWidget {
                color: Colors.red,
              ),
               customButton(
+                
                icon: Icons.video_camera_front_outlined,
                label: "Video",
                color: Colors.pink,
