@@ -9,10 +9,17 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      final double size = MediaQuery.of(context).size.width;
-     final Map data=ModalRoute.of(context)!.settings.arguments as Map;
+     final Map items=ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-        title: Text("DetailScreen"),
+        backgroundColor: Colors.red,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Details"),
+            Text("Category:${items["category"]}")
+          ],
+        ),
       ),
      body: Column(
        children: [
@@ -21,7 +28,7 @@ class DetailScreen extends StatelessWidget {
              fit: StackFit.loose,
              children: [
                Image.asset(
-                 data["image"],
+                 items["data"]['image'],
                  fit:BoxFit.cover,
                  ),
                  Positioned(
@@ -30,7 +37,7 @@ class DetailScreen extends StatelessWidget {
                      width: size,
                      height: 56,
                      color:Colors.black.withOpacity(0.5) ,
-                     child: Text(data["title"],
+                     child: Text(items["data"]["title"],
                      style: TextStyle(
                        color: Colors.white
                      ),
@@ -55,7 +62,7 @@ class DetailScreen extends StatelessWidget {
              ),
               customButton(
                icon: Icons.video_camera_front_outlined,
-               label: "Checked",
+               label: "Video",
                color: Colors.pink,
              )
            ],
@@ -81,7 +88,7 @@ class DetailScreen extends StatelessWidget {
                        thickness: 3,
                        color: Colors.orange,
                      ),
-                     for(int i=0; i<data["ingredients"].length; i++)
+                     for(int i=0; i<items["data"]["ingredients"].length; i++)
                      Padding(
                        padding: const EdgeInsets.all(8.0),
                        child: Row(
@@ -97,7 +104,7 @@ class DetailScreen extends StatelessWidget {
                            SizedBox(
                              width: 10,
                            ),
-                            Text(data['ingredients'][i]),
+                            Text(items["data"]['ingredients'][i]),
                          ],
                        ),
                      ),
@@ -123,7 +130,7 @@ class DetailScreen extends StatelessWidget {
                        thickness: 3,
                        color: Colors.orange,
                      ),
-                     for(int i=0; i<data["directions"].length; i++)
+                     for(int i=0; i<items["data"]["directions"].length; i++)
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -141,7 +148,7 @@ class DetailScreen extends StatelessWidget {
                            ),
                             Expanded(
                               child: 
-                              Text(data['directions'][i]
+                              Text(items["data"]['directions'][i]
                               )
                               ),
                          ],
