@@ -1,4 +1,4 @@
-import 'package:demo/details/dtails.dart';
+import 'package:demo/details/details.dart';
 import 'package:demo/screens/bread/bread.dart';
 import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';

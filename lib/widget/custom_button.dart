@@ -19,7 +19,7 @@ class customButton extends StatelessWidget {
       child: Material(
         color: color,
         child: InkWell(
-          onTap: (){},
+          onTap: onTap,
           child: Container(
             child: Column(
               children: [
