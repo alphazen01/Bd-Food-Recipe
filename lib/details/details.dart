@@ -72,7 +72,10 @@ class DetailScreen extends StatelessWidget {
              ),
              customButton(
                onTap: (){
-                 Navigator.pushNamed(context, VideoScreen.path);
+                 Navigator.pushNamed(context, VideoScreen.path,
+                 arguments: items["data"]
+                 );
+                 
                },
                icon: Icons.video_camera_front_outlined,
                label: "Videos",
