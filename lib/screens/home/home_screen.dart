@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: (){
                   Navigator.pushNamed(context, VideoScreen.path);
                 }, 
-                icon: Icon(Icons.share)
+                icon: Icon(Icons.favorite)
                 )
             ],
           ),

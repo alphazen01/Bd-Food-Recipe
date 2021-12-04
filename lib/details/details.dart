@@ -3,12 +3,22 @@ import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/video/video.dart';
 import 'package:demo/widget/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 class DetailScreen extends StatelessWidget {
   static final String path="DetailScreen";
   const DetailScreen({
      Key? key,
    }) : super(key: key);
+    shareData(items){
+    String data ="""
+${items["title"]}
+${items["ingredients"].toString()}
+${items["directions"].toString()}
+    
+    """;
+    Share.share("$data", subject: 'Look what I made!');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +34,14 @@ class DetailScreen extends StatelessWidget {
             Text("Category:${items["category"]}")
           ],
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+             shareData(items["data"]);
+            }, 
+            icon: Icon(Icons.share)
+            )
+        ],
       ),
      body: Column(
        children: [
