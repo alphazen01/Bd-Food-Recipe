@@ -5,7 +5,7 @@ import 'package:demo/widget/custom_grid_tile.dart';
 import 'package:flutter/material.dart';
 
 class FastFoodScreen extends StatelessWidget {
-  static final String path="FastFoodScreen";
+ static final String path="FastFoodScreen";
  final List fast_food=bdfood["fast_food"];
 
   @override

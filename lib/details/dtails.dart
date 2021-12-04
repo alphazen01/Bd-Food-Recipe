@@ -1,15 +1,17 @@
+
+import 'package:demo/screens/fast_food/fast_food.dart';
+import 'package:demo/screens/video/video.dart';
 import 'package:demo/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
-  
   static final String path="DetailScreen";
-  
-  const DetailScreen({ Key? key, }) : super(key: key);
+  const DetailScreen({
+     Key? key,
+   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
      final double size = MediaQuery.of(context).size.width;
      final Map items=ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
@@ -53,21 +55,30 @@ class DetailScreen extends StatelessWidget {
          Row(
            children: [
              customButton(
+               onTap: (){
+
+               },
                icon: Icons.check_outlined,
                label: "Checked",
                color: Colors.orange,
              ),
               customButton(
+                onTap: (){
+                  Navigator.pushNamed(context, FastFoodScreen.path);
+                },
                icon: Icons.favorite,
                label: "Favorite",
                color: Colors.red,
              ),
-              customButton(
-                
+             customButton(
+               onTap: (){
+                 Navigator.pushNamed(context, VideoScreen.path);
+               },
                icon: Icons.video_camera_front_outlined,
-               label: "Video",
+               label: "Videos",
                color: Colors.pink,
              )
+              
            ],
          ),
          Expanded(

@@ -6,6 +6,7 @@ import 'package:demo/screens/home/home_screen.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
 import 'package:demo/screens/rice/rice.dart';
 import 'package:demo/screens/video/video.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +24,9 @@ void main() {
         DetailScreen.path:(ctx)=>DetailScreen(),
         DessertScreen.path:(ctx)=>DessertScreen(),
         RiceScreen.path:(ctx)=>RiceScreen(),
-        VideoScreen.path:(ctx)=>VideoScreen()
+        VideoScreen.path:(ctx)=>VideoScreen(),
+        
+       
       }
     )
   );
