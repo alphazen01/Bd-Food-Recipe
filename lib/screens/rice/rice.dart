@@ -16,7 +16,8 @@ class RiceScreen extends StatelessWidget {
     itemBuilder: (BuildContext context, int index){
       return customGridTile(
         onTap: (){
-          Navigator.pushNamed(context, DetailScreen.path,arguments:{"category":"Rice","data":rice[index]});
+          Navigator.pushNamed(context, DetailScreen.path,
+          arguments:{"category":"Rice","data":rice[index]});
         },
         imageUrl: rice[index]["image"],
         title: rice[index]["title"],

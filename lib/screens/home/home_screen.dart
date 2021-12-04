@@ -3,6 +3,7 @@ import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
 import 'package:demo/screens/rice/rice.dart';
+import 'package:demo/screens/video/video.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,12 +21,110 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
             actions: [
               IconButton(
-                onPressed: (){}, 
-                icon: Icon(Icons.favorite)
+                onPressed: (){
+                  Navigator.pushNamed(context, VideoScreen.path);
+                }, 
+                icon: Icon(Icons.share)
                 )
             ],
           ),
-          drawer: Drawer(),
+          drawer: Drawer(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  Image.asset("assets/images/rice/1.jpg")
+                ],
+                ),
+             ListTile(
+               onTap:(){} ,
+              title:Text("All Recipes"), 
+            ),
+             ListTile(
+              onTap: (){},
+              title:Text("My Recipes"),
+              trailing: Container(
+                height: 25,
+                width: 25,
+                color: Colors.red,
+                child: Center(
+                  child: Text("0",
+                  style: TextStyle(
+                    color: Colors.white
+                 ),
+                 ),
+                ),
+              ),
+            ),
+             ListTile(
+              onTap: (){},
+              title:Text("Favourite"),
+              trailing: Container(
+                height: 25,
+                width: 25,
+                color: Colors.red,
+                child: Center(
+                  child: Text("1",
+                  style: TextStyle(
+                    color: Colors.white
+                 ),
+                 ),
+                ),
+              ),
+            ),
+             ListTile(
+              onTap: (){},
+              title:Text("Cooked"),
+              trailing: Container(
+                height: 25,
+                width: 25,
+                color: Colors.red,
+                child: Center(
+                  child: Text("0",
+                  style: TextStyle(
+                    color: Colors.white
+                 ),
+                 ),
+                ),
+              ),
+            ),
+             ListTile(
+              onTap: (){},
+              title:Text("Tips"),
+              trailing: Container(
+                height: 25,
+                width: 25,
+                color: Colors.red,
+                child: Center(
+                  child: Text("50+",
+                  style: TextStyle(
+                    color: Colors.white
+                 ),
+                 ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text("MORE"),
+            ),
+            Divider(
+              thickness: 3,
+            ),
+             ListTile(
+              onTap: (){},
+              leading: Icon(Icons.search),
+              title:Text("Search Recipe"),
+            ),
+             ListTile(
+              onTap: (){},
+              leading: Icon(Icons.favorite),
+              title:Text("Rate Us"),
+            ),
+            ],
+          ), 
+          ),
           body: Column(
           children: [
             SizedBox(

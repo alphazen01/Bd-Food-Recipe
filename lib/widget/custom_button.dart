@@ -4,11 +4,13 @@ class customButton extends StatelessWidget {
   final IconData? icon;
   final String? label;
   final Color?color;
+  final VoidCallback? onTap;
   const customButton({
     Key? key,
     this.icon,
     this.label,
-    this.color
+    this.color,
+    this.onTap
   }) : super(key: key);
 
   @override
@@ -22,7 +24,8 @@ class customButton extends StatelessWidget {
             child: Column(
               children: [
                 Icon(icon,color: Colors.white,),
-                Text("$label")
+                Text("$label"),
+                
               ],
             ),
           ),

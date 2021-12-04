@@ -17,7 +17,7 @@ class NonVegScreeen extends StatelessWidget {
       return customGridTile(
         onTap: (){
           Navigator.pushNamed(context, DetailScreen.path,
-          arguments:{"category":"Non_Veg-food","data":non_veg[index]});
+          arguments:{"category":"Non-Veg","data":non_veg[index]});
         },
         imageUrl: non_veg[index]["image"],
         title: non_veg[index]["title"],
