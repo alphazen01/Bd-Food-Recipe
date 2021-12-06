@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   webview_flutter:
   share:
+  font_awesome_flutter:
    
 
 dev_dependencies:

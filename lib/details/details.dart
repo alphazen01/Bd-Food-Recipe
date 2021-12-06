@@ -61,7 +61,8 @@ ${items["directions"].toString()}
                      color:Colors.black.withOpacity(0.5) ,
                      child: Text(items["data"]["title"],
                      style: TextStyle(
-                       color: Colors.white
+                       color: Colors.white,
+                       fontSize: 24
                      ),
                      ),
                      
@@ -116,7 +117,7 @@ ${items["directions"].toString()}
                          Padding(
                            padding: const EdgeInsets.symmetric(horizontal: 10),
                            child: Text("Ingrdients",
-                           style: TextStyle(fontSize: 16),
+                           style: TextStyle(fontSize: 18),
                            ),
                          ),
                            Divider(
@@ -158,7 +159,7 @@ ${items["directions"].toString()}
                          Padding(
                            padding: const EdgeInsets.symmetric(horizontal: 10),
                            child: Text("Directions",
-                           style: TextStyle(fontSize: 16),
+                           style: TextStyle(fontSize: 18),
                            ),
                          ),
                            Divider(

@@ -16,45 +16,59 @@ class customGridTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Card(
-        elevation: 10,
-        child: GridTile(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset("$imageUrl"),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Text("$title",
-                  style: TextStyle(color: Colors.green),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                   
-                    Row(
-                  children: [
-                     Icon(Icons.watch,color: Colors.red,),
-                    Text("30 min"),
-                    SizedBox(
-                      width: 20,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Card(
+          elevation: 10,
+          child: GridTile(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset("$imageUrl"),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text("$title",
+                    style: TextStyle(color: Colors.green),
                     ),
-                    Icon(Icons.food_bank,color: Colors.red,),
-                    Text("15 ingredients")
-                  ],
-                )
-                  ],
-                ),
-                 
-              ],
-            ),
-          )
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                     
+                      Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                      Icon(Icons.watch,color: Colors.red,),
+                      Text("30 min"),
+                        ],
+                      ),
+                      
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Row(
+                        children: [
+                      Icon(Icons.food_bank,color: Colors.red,),
+                      Text("15 ingredients")
+                        ],
+                      )
+                     
+                    ],
+                  )
+                    ],
+                  ),
+                   
+                ],
+              ),
+            )
+          ),
         ),
       ),
     );
