@@ -1,6 +1,6 @@
-import 'package:demo/details/details.dart';
 import 'package:demo/global/functions.dart';
 import 'package:demo/screens/data/data.dart';
+import 'package:demo/screens/details/details.dart';
 import 'package:demo/widget/custom_grid_tile.dart';
 import 'package:flutter/material.dart';
 

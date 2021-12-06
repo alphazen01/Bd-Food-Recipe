@@ -1,6 +1,6 @@
-import 'package:demo/details/details.dart';
 import 'package:demo/screens/bread/bread.dart';
 import 'package:demo/screens/dessert/dessert.dart';
+import 'package:demo/screens/details/details.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/home/home_screen.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       // home: HomeScreen()
       // home: DetailScreen(),
@@ -28,6 +29,7 @@ void main() {
         
        
       }
+      
     )
   );
 }
