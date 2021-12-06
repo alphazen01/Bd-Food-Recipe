@@ -88,6 +88,7 @@ ${items["directions"].toString()}
                icon: Icons.favorite,
                label: "Favorite",
                color: Colors.red,
+               
              ),
              customButton(
                onTap: (){
@@ -106,99 +107,105 @@ ${items["directions"].toString()}
          Expanded(
            child:SingleChildScrollView(
              child: Container(
-               child: Column(
-                 crossAxisAlignment: CrossAxisAlignment.start,
-                 children: [
-                   Card(
-                     elevation: 10,
-                     child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         Padding(
-                           padding: const EdgeInsets.symmetric(horizontal: 10),
-                           child: Text("Ingrdients",
-                           style: TextStyle(fontSize: 18),
-                           ),
-                         ),
-                           Divider(
-                       thickness: 3,
-                       color: Colors.orange,
-                     ),
-                     for(int i=0; i<items["data"]["ingredients"].length; i++)
-                     Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child: Row(
+               child: Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Card(
+                       elevation: 10,
+                       child: Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
-                           Container(
-                           height: 8,
-                           width: 8,
-                           decoration: BoxDecoration(
-                             color: Colors.red,
-                             borderRadius: BorderRadius.circular(4),
-                           ),  
+                           Padding(
+                             padding: const EdgeInsets.symmetric(horizontal: 10),
+                             child: Text("Ingrdients",
+                             style: TextStyle(
+                               fontSize: 18,
+                               fontWeight: FontWeight.w700
+                               ),
+                             ),
                            ),
-                           SizedBox(
-                             width: 10,
-                           ),
-                            Text(items["data"]['ingredients'][i]),
+                             Divider(
+                         thickness: 3,
+                         color: Colors.orange,
+                       ),
+                       for(int i=0; i<items["data"]["ingredients"].length; i++)
+                       Padding(
+                         padding: const EdgeInsets.all(8.0),
+                         child: Row(
+                           children: [
+                             Container(
+                             height: 8,
+                             width: 8,
+                             decoration: BoxDecoration(
+                               color: Colors.red,
+                               borderRadius: BorderRadius.circular(4),
+                             ),  
+                             ),
+                             SizedBox(
+                               width: 10,
+                             ),
+                              Text(items["data"]['ingredients'][i]),
+                           ],
+                         ),
+                       ),
+                      
                          ],
                        ),
                      ),
-                    
-                       ],
+                      SizedBox(
+                       height: 15,
                      ),
-                   ),
-                    SizedBox(
-                     height: 15,
-                   ),
-                   Card(
-                     elevation: 10,
-                     child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         Padding(
-                           padding: const EdgeInsets.symmetric(horizontal: 10),
-                           child: Text("Directions",
-                           style: TextStyle(fontSize: 18),
-                           ),
-                         ),
-                           Divider(
-                       thickness: 3,
-                       color: Colors.orange,
-                     ),
-                     for(int i=0; i<items["data"]["directions"].length; i++)
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
+                     Card(
+                       elevation: 10,
+                       child: Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
-                           Container(
-                           height: 8,
-                           width: 8,
-                           decoration: BoxDecoration(
-                             color: Colors.red,
-                             borderRadius: BorderRadius.circular(4),
-                           ),  
+                           Padding(
+                             padding: const EdgeInsets.symmetric(horizontal: 10),
+                             child: Text("Directions",
+                             style: TextStyle(fontSize: 18),
+                             ),
                            ),
-                           SizedBox(
-                             width: 10,
-                           ),
-                            Expanded(
-                              child: 
-                              Text(items["data"]['directions'][i]
-                              )
-                              ),
+                             Divider(
+                         thickness: 3,
+                         color: Colors.orange,
+                       ),
+                       for(int i=0; i<items["data"]["directions"].length; i++)
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                           children: [
+                             Container(
+                             height: 8,
+                             width: 8,
+                             decoration: BoxDecoration(
+                               color: Colors.red,
+                               borderRadius: BorderRadius.circular(4),
+                             ),  
+                             ),
+                             SizedBox(
+                               width: 10,
+                             ),
+                              Expanded(
+                                child: 
+                                Text(items["data"]['directions'][i]
+                                )
+                                ),
+                           ],
+                       ),
+                        ),
+                      
+                       
                          ],
+                       ),
                      ),
-                      ),
+                   
                     
                      
-                       ],
-                     ),
-                   ),
-                 
-                  
-                   
-                 ],
+                   ],
+                 ),
                ),
              ),
            ),

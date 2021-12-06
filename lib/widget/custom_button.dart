@@ -24,7 +24,10 @@ class customButton extends StatelessWidget {
             child: Column(
               children: [
                 Icon(icon,color: Colors.white,),
-                Text("$label"),
+                Text("$label",style: TextStyle(
+                  color: Colors.white
+                ),),
+                
                 
               ],
             ),
