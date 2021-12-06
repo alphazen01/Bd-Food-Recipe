@@ -131,13 +131,14 @@ class HomeScreen extends StatelessWidget {
               height: 10,
             ),
           TabBar(
+            isScrollable: true,
             unselectedLabelColor: Colors.redAccent,
             indicatorSize: TabBarIndicatorSize.tab,
             indicator: BoxDecoration(
             gradient: LinearGradient(
             colors: [Colors.redAccent, Colors.orangeAccent]
             ),
-            borderRadius: BorderRadius.circular(50),
+            // borderRadius: BorderRadius.circular(50),
             color: Colors.redAccent
             ),
             
