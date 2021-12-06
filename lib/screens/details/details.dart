@@ -13,7 +13,9 @@ class DetailScreen extends StatelessWidget {
     shareData(items){
     String data ="""
 ${items["title"]}
+
 ${items["ingredients"].toString()}
+
 ${items["directions"].toString()}
     
     """;
