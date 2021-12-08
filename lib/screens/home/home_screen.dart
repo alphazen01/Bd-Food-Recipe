@@ -161,37 +161,40 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-          TabBar(
-            isScrollable: true,
-            unselectedLabelColor: Colors.redAccent,
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicator: BoxDecoration(
-            gradient: LinearGradient(
-            colors: [Colors.redAccent, Colors.orangeAccent]
-            ),
-            // borderRadius: BorderRadius.circular(50),
-            color: Colors.redAccent
-            ),
-            
-          tabs: [
-           Tab(
-             child: Text("Rice"),
-           ), 
-            Tab(
-             child: Text("Bread"),
-           ),   
-            Tab(
-             child: Text("Fast-Food"),
-           ),   
-            Tab(
-             child: Text("Non-Veg"),
-           ),
-           Tab(
-             child: Text("Dessert"),
-           ),   
-            
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: TabBar(
+              isScrollable: true,
+              unselectedLabelColor: Colors.redAccent,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicator: BoxDecoration(
+              gradient: LinearGradient(
+              colors: [Colors.redAccent, Colors.orangeAccent]
+              ),
+              // borderRadius: BorderRadius.circular(50),
+              color: Colors.redAccent
+              ),
+              
+            tabs: [
+             Tab(
+               child: Text("Rice"),
+             ), 
+              Tab(
+               child: Text("Bread"),
+             ),   
+              Tab(
+               child: Text("Fast-Food"),
+             ),   
+              Tab(
+               child: Text("Non-Veg"),
+             ),
+             Tab(
+               child: Text("Dessert"),
+             ),   
+              
          ]
         ),
+          ),
         Expanded(
           child: TabBarView(
             children: [

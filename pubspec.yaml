@@ -31,6 +31,7 @@ dependencies:
   webview_flutter:
   share:
   font_awesome_flutter:
+  flutter_native_splash:
    
 
 dev_dependencies:
@@ -55,6 +56,12 @@ flutter:
     - assets/images/fast_food/
     - assets/images/non_veg/
     - assets/images/rice/
+    - assets/images/splash/
+    
+    
+    
+    
+    
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
