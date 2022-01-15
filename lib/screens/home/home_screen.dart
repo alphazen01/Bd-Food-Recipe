@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           drawer: Theme(
             data:Theme.of(context).copyWith(
               canvasColor: Color(0xff292B3E)
-            ) ,
+            ),
             child: Drawer(
             child: Container(
               child: Column(
