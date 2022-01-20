@@ -1,3 +1,5 @@
+import 'package:demo/cooked.dart';
+import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
 import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/details/details.dart';
@@ -9,7 +11,8 @@ import 'package:demo/screens/video/video.dart';
 
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
       
@@ -26,6 +29,8 @@ void main() {
         DessertScreen.path:(ctx)=>DessertScreen(),
         RiceScreen.path:(ctx)=>RiceScreen(),
         VideoScreen.path:(ctx)=>VideoScreen(),
+        Favorite.path:(ctx)=>Favorite(),
+        Cooked.path:(ctx)=>Cooked(),
         
        
       }
