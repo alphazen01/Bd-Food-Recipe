@@ -1,3 +1,5 @@
+import 'package:demo/cooked.dart';
+import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
 import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
@@ -70,7 +72,9 @@ class HomeScreen extends StatelessWidget {
                    
                  
                  ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.pushNamed(context, Favorite.path);
+                  },
                   title:Text("Favourite",
                   style: TextStyle(color: Colors.white),
                   ),
@@ -88,7 +92,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                  ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.pushNamed(context, Cooked.path);
+                  },
                   title:Text("Cooked",
                   style: TextStyle(color: Colors.white),
                   ),

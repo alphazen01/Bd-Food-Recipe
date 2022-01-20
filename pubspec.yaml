@@ -32,6 +32,8 @@ dependencies:
   share:
   font_awesome_flutter:
   flutter_native_splash:
+  sqflite: ^2.0.2
+  path_provider: ^2.0.8
    
 
 dev_dependencies:

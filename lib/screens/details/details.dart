@@ -1,4 +1,8 @@
 
+import 'dart:math';
+
+import 'package:demo/database_helper.dart';
+import 'package:demo/recipe_model.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/video/video.dart';
 import 'package:demo/widget/custom_button.dart';
@@ -7,9 +11,8 @@ import 'package:share/share.dart';
 
 class DetailScreen extends StatelessWidget {
   static final String path="DetailScreen";
-  const DetailScreen({
-     Key? key,
-   }) : super(key: key);
+  Random random = Random();
+
     shareData(items){
     String data ="""
 ${items["title"]}
@@ -80,12 +83,19 @@ ${items["directions"].toString()}
 
                },
                icon: Icons.check_outlined,
-               label: "Checked",
+               label: "Cooked",
                color: Colors.orange,
              ),
               customButton(
-                onTap: (){
-                  Navigator.pushNamed(context, FastFoodScreen.path);
+                onTap: ()async{
+                   final recipeModel = RecipeModel(
+                      id: random.nextInt(100),
+                      title: items["data"]['title'],
+                      image: items["data"]['image'],
+                      ingredients: items["data"]["ingredients"].toString(),
+                      directions: items["data"]["directions"].toString(),
+                      youtubeUrl: items["data"]["youtubeUrl"]);
+                  await DatabaseHelper.instance.addFavoriteRecipe(recipeModel);
                 },
                icon: Icons.favorite,
                label: "Favorite",
