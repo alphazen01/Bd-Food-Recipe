@@ -1,4 +1,5 @@
 
+import 'package:demo/about.dart';
 import 'package:demo/cooked.dart';
 import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
@@ -9,6 +10,7 @@ import 'package:demo/screens/home/home_screen.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
 import 'package:demo/screens/rice/rice.dart';
 import 'package:demo/screens/video/video.dart';
+import 'package:demo/tips.dart';
 
 import 'package:flutter/material.dart';
 
@@ -32,6 +34,8 @@ void main() async{
         VideoScreen.path:(ctx)=>VideoScreen(),
         Favorite.path:(ctx)=>Favorite(),
         Cooked.path:(ctx)=>Cooked(),
+        TipsScreen.path:(ctx)=>TipsScreen(),
+        AboutScreen.path:(ctx)=>AboutScreen(),
         
         
        

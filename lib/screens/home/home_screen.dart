@@ -1,4 +1,6 @@
 
+import 'package:demo/about.dart';
+import 'package:demo/constant/constant.dart';
 import 'package:demo/cooked.dart';
 import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
@@ -7,6 +9,7 @@ import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
 import 'package:demo/screens/rice/rice.dart';
 import 'package:demo/screens/video/video.dart';
+import 'package:demo/tips.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,54 +45,20 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      Image.asset("assets/images/rice/1.jpg")
+                      Image.asset("assets/images/splash/drawer_photo.jpg")
                     ],
                     ),
                  ListTile(
-                   onTap:(){} ,
                   title:Text("All Recipes",
                   style: TextStyle(color: Colors.white),
                   ), 
                 ),
-                 
-                     ListTile(
-                      onTap: (){},
-                      title:Text("My Recipes",
-                      style: TextStyle(color: Colors.white),
-                      ),
-                      trailing: Container(
-                        height: 25,
-                        width: 25,
-                        color: Colors.red,
-                        child: Center(
-                          child: Text("0",
-                          style: TextStyle(
-                            color: Colors.white
-                         ),
-                         ),
-                        ),
-                      ),
-                    ),
-                   
-                 
                  ListTile(
                   onTap: (){
                     Navigator.pushNamed(context, Favorite.path);
                   },
                   title:Text("Favourite",
                   style: TextStyle(color: Colors.white),
-                  ),
-                  trailing: Container(
-                    height: 25,
-                    width: 25,
-                    color: Colors.red,
-                    child: Center(
-                      child: Text("1",
-                      style: TextStyle(
-                        color: Colors.white
-                     ),
-                     ),
-                    ),
                   ),
                 ),
                  ListTile(
@@ -99,35 +68,13 @@ class HomeScreen extends StatelessWidget {
                   title:Text("Cooked",
                   style: TextStyle(color: Colors.white),
                   ),
-                  trailing: Container(
-                    height: 25,
-                    width: 25,
-                    color: Colors.red,
-                    child: Center(
-                      child: Text("0",
-                      style: TextStyle(
-                        color: Colors.white
-                     ),
-                     ),
-                    ),
-                  ),
                 ),
                  ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.pushNamed(context, TipsScreen.path);
+                  },
                   title:Text("Tips",
                   style: TextStyle(color: Colors.white),
-                  ),
-                  trailing: Container(
-                    height: 25,
-                    width: 25,
-                    color: Colors.red,
-                    child: Center(
-                      child: Text("50+",
-                      style: TextStyle(
-                        color: Colors.white
-                     ),
-                     ),
-                    ),
                   ),
                 ),
                 Padding(
@@ -141,20 +88,35 @@ class HomeScreen extends StatelessWidget {
                   thickness: 3,
                 ),
                  ListTile(
-                  onTap: (){},
-                  leading: Icon(Icons.search,
+                  onTap: (){
+                     launchURL(appLink);
+                  },
+                  leading: Icon(Icons.rate_review,
                   color: Colors.white,
                   ),
-                  title:Text("Search Recipe",
+                  title:Text("Rate Us",
                   style: TextStyle(color: Colors.white),
                   ),
                 ),
                  ListTile(
-                  onTap: (){},
-                  leading: Icon(Icons.thumb_up,
+                  onTap: (){
+                    launchURL(appLink);
+                  },
+                  leading: Icon(Icons.update,
                   color: Colors.white,
                   ),
-                  title:Text("Rate Us",
+                  title:Text("Update",
+                  style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                 ListTile(
+                  onTap: (){
+                    Navigator.pushNamed(context, AboutScreen.path);
+                  },
+                  leading: Icon(Icons.person,
+                  color: Colors.white,
+                  ),
+                  title:Text("About Us",
                   style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -218,4 +180,6 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+  void launchURL(String appLink) {}
 }
