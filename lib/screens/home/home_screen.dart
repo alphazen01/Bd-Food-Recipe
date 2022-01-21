@@ -1,3 +1,4 @@
+
 import 'package:demo/cooked.dart';
 import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, VideoScreen.path);
+                  Navigator.pushNamed(context, Favorite.path);
                 }, 
                 icon: Icon(Icons.favorite)
                 )
