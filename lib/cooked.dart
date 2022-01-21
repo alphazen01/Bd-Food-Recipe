@@ -11,15 +11,15 @@ class Cooked extends StatefulWidget {
 }
 
 class _CookedState extends State<Cooked> {
-   bool isLoading = false;
-   @override
+  bool isLoading = false;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
         title: Text("Cooked"),
         backgroundColor: Colors.red,
       ),
-      body: Container(
+     body: Container(
         height: 400,
         child: FutureBuilder(
           future: DatabaseHelper.instance.getCookedRecipe(),

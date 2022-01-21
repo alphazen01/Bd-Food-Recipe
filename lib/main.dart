@@ -1,3 +1,4 @@
+
 import 'package:demo/cooked.dart';
 import 'package:demo/favorite.dart';
 import 'package:demo/screens/bread/bread.dart';
@@ -31,6 +32,7 @@ void main() async{
         VideoScreen.path:(ctx)=>VideoScreen(),
         Favorite.path:(ctx)=>Favorite(),
         Cooked.path:(ctx)=>Cooked(),
+        
         
        
       }

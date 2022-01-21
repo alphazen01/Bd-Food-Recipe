@@ -79,8 +79,15 @@ ${items["directions"].toString()}
          Row(
            children: [
              customButton(
-               onTap: (){
-
+               onTap: ()async{
+               final recipeModel = RecipeModel(
+                      id: random.nextInt(100),
+                      title: items["data"]['title'],
+                      image: items["data"]['image'],
+                      ingredients: items["data"]["ingredients"].toString(),
+                      directions: items["data"]["directions"].toString(),
+                      youtubeUrl: items["data"]["youtubeUrl"]);
+                  await DatabaseHelper.instance.addCookedRecipe(recipeModel);
                },
                icon: Icons.check_outlined,
                label: "Cooked",
