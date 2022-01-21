@@ -165,7 +165,7 @@ ${items["directions"].toString()}
                              SizedBox(
                                width: 10,
                              ),
-                              Text(items["data"]['ingredients'][i]),
+                              Expanded(child: Text(items["data"]['ingredients'][i])),
                            ],
                          ),
                        ),

@@ -11,6 +11,19 @@ class Favorite extends StatefulWidget {
 }
 
 class _FavoriteState extends State<Favorite> {
+   countIngradients(ingradients) {
+    var _ingradients =
+        ingradients.toString().replaceAll("[", "").replaceAll("]", "");
+    var splitIngradients = _ingradients.split(",");
+    return splitIngradients.length;
+  }
+
+  countDirections(directions) {
+    var _directions =
+        directions.toString().replaceAll("[", "").replaceAll("]", "");
+    var splitDirections = _directions.split(",");
+    return splitDirections.length;
+  }
     bool isLoading = false;
   @override
   Widget build(BuildContext context) {
@@ -66,8 +79,8 @@ class _FavoriteState extends State<Favorite> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        // "Ingradients:  ${countIngradients(recipe.ingredients)}",
-                                        "Ingradients",
+                                        "Ingradients:  ${countIngradients(recipe.ingredients)}",
+                                        
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
@@ -77,8 +90,8 @@ class _FavoriteState extends State<Favorite> {
                                         width: 8,
                                       ),
                                       Text(
-                                        // "Directions:  ${countDirections(recipe.directions)}",
-                                        "Directions",
+                                        "Directions:  ${countDirections(recipe.directions)}",
+                                        
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
