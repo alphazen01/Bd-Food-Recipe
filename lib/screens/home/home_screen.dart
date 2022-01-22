@@ -8,7 +8,7 @@ import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
 import 'package:demo/screens/non_veg/non_veg.dart';
 import 'package:demo/screens/rice/rice.dart';
-import 'package:demo/screens/video/video.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:demo/tips.dart';
 import 'package:flutter/material.dart';
 
@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                  ListTile(
                   onTap: (){
-                     launchURL(appLink);
+                    launchURL(appLink);
                   },
                   leading: Icon(Icons.rate_review,
                   color: Colors.white,
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                  ListTile(
                   onTap: (){
-                    launchURL(appLink);
+                   launchURL(appLink);
                   },
                   leading: Icon(Icons.update,
                   color: Colors.white,
