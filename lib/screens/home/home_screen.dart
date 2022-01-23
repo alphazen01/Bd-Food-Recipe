@@ -3,6 +3,7 @@ import 'package:demo/about.dart';
 import 'package:demo/constant/constant.dart';
 import 'package:demo/cooked.dart';
 import 'package:demo/favorite.dart';
+import 'package:demo/global/functions.dart';
 import 'package:demo/screens/bread/bread.dart';
 import 'package:demo/screens/dessert/dessert.dart';
 import 'package:demo/screens/fast_food/fast_food.dart';
@@ -181,5 +182,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  void launchURL(String appLink) {}
 }

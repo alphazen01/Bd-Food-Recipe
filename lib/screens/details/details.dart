@@ -11,19 +11,38 @@ import 'package:share/share.dart';
 
 class DetailScreen extends StatelessWidget {
   static final String path="DetailScreen";
+
+  void _onShare(BuildContext context, text, subject) async {
+    if (subject.isNotEmpty) {
+      await Share.share(
+        "$text",
+        subject: "$subject",
+      );
+    } else {
+      await Share.share(
+        "Dummy text",
+        subject: "Dummy Subject",
+      );
+    }
+  }
+
   Random random = Random();
 
-    shareData(items){
-    String data ="""
-${items["title"]}
+   String getShareData(title, ingredients,directions){
+      var _ingradients =
+        ingredients.toString().replaceAll("[", "").replaceAll("]", "");
 
-${items["ingredients"].toString()}
+    var _directons =
+        directions.toString().replaceAll("[", "").replaceAll("]", "");
 
-${items["directions"].toString()}
-    
-    """;
-    Share.share("$data", subject: 'Look what I made!');
-  }
+    return '''
+$title 
+
+Ingradients: ${_ingradients.toString()}
+
+Directions: ${_directons.toString()};
+    ''';
+   }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +61,16 @@ ${items["directions"].toString()}
         actions: [
           IconButton(
             onPressed: (){
-             shareData(items["data"]);
+             _onShare(
+                  context,
+                  getShareData(
+                    items["data"]["title"],
+                    items["data"]["ingredients"],
+                    items["data"]["directions"],
+                  ),
+                  "Feel free share this recipe",
+                );
+                
             }, 
             icon: Icon(Icons.share)
             )

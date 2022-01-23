@@ -11,16 +11,10 @@ SliverGridDelegateWithFixedCrossAxisCount customGridDeleget() {
     childAspectRatio: 0.8,
      );
   }
-//   int countIngredients(List ingredients) {
-//   return ingredients.length;
-// }
-
-// void launchURL(url) async {
-//   if (!await launch(url)) throw 'Could not launch $url';
-// }
-int countIngreients(List ingredients){
-return ingredients.length;
+  int countIngredients(List ingredients) {
+  return ingredients.length;
 }
-void launchURL(url)async{
-  if (!await launch(url)) throw 'could not launch $url';
+
+void launchURL(url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }
